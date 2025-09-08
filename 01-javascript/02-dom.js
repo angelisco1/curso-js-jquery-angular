@@ -1,7 +1,9 @@
-const urlAPI = "https://www.randomnumberapi.com/api/v1.0/random?min=0&max=10"
+const urlAPI = "https://csrng.net/csrng/csrng.php?min=1&max=10"
 
 const getRandomCuenta = async () => {
   // const resp = await fetch(urlAPI)
+  // const data = await resp.json()
+  // console.log(data)
   const data = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(Math.floor(Math.random()*10))

@@ -1,0 +1,24 @@
+<h2>Tema 01 - Data Binding</h2>
+
+<h3>String Interpolation</h3>
+
+<p>Me llamo {{ nombre }}</p>
+<p>Eres {{ edad >= 18 ? 'mayor' : 'menor' }} de edad</p>
+
+<!-- Llamar a funciones en los string interpolations no deberíamos de hacerlo -->
+<!-- <p>Email: {{ getEmailEmpresa() }}</p> -->
+
+
+<h3>Property Binding</h3>
+
+<!-- <img src="{{logoAngular}}" width="100" /> -->
+<img [src]="logoAngular" alt="Logo de {{nombreLogo}}" width="100" />
+
+
+<h3>Event Binding</h3>
+
+<button type="button" (click)="cambiarNombre('Charles')">Cambiar nombre a Charles</button>
+<button type="button" (click)="cambiarNombreConEvento($event, 'Charly')">Cambiar nombre a Charly</button>
+
+
+<input type="text" >

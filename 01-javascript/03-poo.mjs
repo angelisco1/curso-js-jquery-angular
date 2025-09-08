@@ -1,6 +1,7 @@
+// EcmaScript Modules
 import { Persona } from './03-poo/persona.mjs'
 import { Alumno } from './03-poo/alumno.mjs'
-// EcmaScriptModules
+
 // CommonJS
 // const Persona = require('./03-poo/persona')
 

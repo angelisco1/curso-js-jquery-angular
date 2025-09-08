@@ -12,8 +12,10 @@ export class Persona {
 
 export const MI_NUM = 3
 
+
 // export default Persona;
+
 // export {
-//   Persona: Persona,
+//   Persona: Patata,
 //   MI_NUM: MI_NUM,
 // }

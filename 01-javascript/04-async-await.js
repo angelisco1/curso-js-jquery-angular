@@ -69,3 +69,4 @@ const obtenerDatos = async () => {
 }
 
 obtenerDatos()
+  // .then(console.log)
