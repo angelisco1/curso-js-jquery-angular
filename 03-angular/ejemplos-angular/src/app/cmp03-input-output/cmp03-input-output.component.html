@@ -1,0 +1,22 @@
+<h2>Tema 03 - Input y Output</h2>
+
+<div class="d-flex">
+  <app-sugus sabor="fresa" color="red"></app-sugus>
+  <app-sugus sabor="naranja" color="orange"></app-sugus>
+  <app-sugus sabor="piña" color="blue"></app-sugus>
+  <app-sugus></app-sugus>
+</div>
+
+<div class="d-flex">
+  <app-producto-sugus sabor="fresa" color="red" (onAddToCart)="addSugusToCart($event)"></app-producto-sugus>
+
+  <app-producto-sugus sabor="naranja" color="orange" (onAddToCart)="addSugusToCart($event)"></app-producto-sugus>
+  <app-producto-sugus sabor="piña" color="blue" (onAddToCart)="addSugusToCart($event)"></app-producto-sugus>
+  <app-producto-sugus (onAddToCart)="addSugusToCart($event)"></app-producto-sugus>
+</div>
+
+<div>
+  <pre>
+    {{carrito | json}}
+  </pre>
+</div>

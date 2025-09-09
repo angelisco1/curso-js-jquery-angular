@@ -20,5 +20,8 @@
 <button type="button" (click)="cambiarNombre('Charles')">Cambiar nombre a Charles</button>
 <button type="button" (click)="cambiarNombreConEvento($event, 'Charly')">Cambiar nombre a Charly</button>
 
+<h3>Two Way Binding</h3>
 
-<input type="text" >
+<input type="text" [(ngModel)]="nombre">
+
+<input type="text" [value]="nombre" (input)="setNombre($event)">

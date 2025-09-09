@@ -45,7 +45,7 @@ $("form").on("submit", (event) => {
 
     error
       .hide()
-      .appendTo("form > div")
+      .appendTo("form > div > label")
       .fadeIn(1000)
 
     setTimeout(() => {
@@ -54,7 +54,6 @@ $("form").on("submit", (event) => {
           $(this).remove()
         })
     }, 2000)
-
 
     return
   }

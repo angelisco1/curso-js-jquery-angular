@@ -1,0 +1,6 @@
+<div>
+  <app-sugus [color]="color" [sabor]="sabor"></app-sugus>
+  <!-- <input type="number" [value]="cantidad" (input)="setCantidad($event)" /> -->
+  <input type="number" [(ngModel)]="cantidad" />
+  <button type="button" (click)="addToCart()">+</button>
+</div>

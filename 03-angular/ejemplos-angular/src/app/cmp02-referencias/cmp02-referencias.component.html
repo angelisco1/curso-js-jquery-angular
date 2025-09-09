@@ -1,0 +1,6 @@
+<h2>Tema 02 - Referencias</h2>
+
+<video src="video.mp4" width="200" #video></video>
+<button type="button" (click)="playVideo()">Play</button>
+<button type="button" (click)="pauseVideo(video)">Pause</button>
+<input type="range" min="0" max="100" [value]="initialVolume" (input)="setVolume($event, video)" />
