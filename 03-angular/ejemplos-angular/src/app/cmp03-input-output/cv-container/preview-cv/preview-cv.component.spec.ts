@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductoSugusComponent } from './producto-sugus.component';
+import { PreviewCvComponent } from './preview-cv.component';
 
-describe('ProductoSugusComponent', () => {
-  let component: ProductoSugusComponent;
-  let fixture: ComponentFixture<ProductoSugusComponent>;
+describe('PreviewCvComponent', () => {
+  let component: PreviewCvComponent;
+  let fixture: ComponentFixture<PreviewCvComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductoSugusComponent]
+      imports: [PreviewCvComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProductoSugusComponent);
+    fixture = TestBed.createComponent(PreviewCvComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

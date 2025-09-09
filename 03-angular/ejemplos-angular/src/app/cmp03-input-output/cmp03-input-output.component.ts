@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { SugusComponent } from "./sugus/sugus.component";
 import { ProductoSugusComponent } from "./producto-sugus/producto-sugus.component";
 import { JsonPipe } from '@angular/common';
+import { CvContainerComponent } from "./cv-container/cv-container.component";
 
 @Component({
   selector: 'app-cmp03-input-output',
-  imports: [SugusComponent, ProductoSugusComponent, JsonPipe],
+  imports: [SugusComponent, ProductoSugusComponent, JsonPipe, CvContainerComponent],
   templateUrl: './cmp03-input-output.component.html',
   styleUrl: './cmp03-input-output.component.css'
 })

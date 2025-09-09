@@ -1,0 +1,14 @@
+<div class="d-flex">
+  <app-form-cv
+    [nombre]="nombre"
+    [apellido]="apellido"
+    [email]="email"
+    (onChangeNombre)="cambiarNombre($event)"
+    (onChangeApellido)="cambiarApellido($event)"
+    (onChangeEmail)="cambiarEmail($event)"
+    ></app-form-cv>
+
+  <!-- <app-preview-cv [nombreCompleto]="nombre + ' ' + apellido"></app-preview-cv> -->
+  <!-- <app-preview-cv nombreCompleto="{{nombre}} {{apellido}}"></app-preview-cv> -->
+  <app-preview-cv [nombreCompleto]="nombreCompleto" [email]="email"></app-preview-cv>
+</div>

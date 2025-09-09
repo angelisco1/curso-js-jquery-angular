@@ -1,0 +1,17 @@
+<div>
+  <h3>Form CV</h3>
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" [value]="nombre" (input)="sendNombre($event)" />
+  </div>
+
+  <div>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" id="apellidos" [value]="apellido" (change)="sendApellido($event)" />
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="text" id="email" [value]="email" (change)="sendEmail($event)" />
+  </div>
+</div>
