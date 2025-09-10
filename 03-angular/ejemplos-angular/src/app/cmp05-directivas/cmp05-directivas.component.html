@@ -1,0 +1,102 @@
+<h2>Tema 05 - Directivas</h2>
+
+<h3>De atributo</h3>
+
+<p [ngStyle]="{color: 'blue', backgroundColor: 'gray'}">Un párrafo de color azul y con el fondo gris</p>
+
+<p [ngClass]="{completada: tarea.completada}">{{tarea.texto}}</p>
+<button type="button" (click)="toggleCompletada()">Toggle completada</button>
+
+<!-- Otras directivas de atributo: [(ngModel)] -->
+
+<h3>Estructurales</h3>
+
+<!-- *ngIf, *ngFor, ngSwitch, *ngSwitchCase, *ngSwitchDefault -->
+
+<!-- Syntax Control Flow -->
+<h4>&#64;if - &#64;else if - &#64;else</h4>
+
+@if (tarea.completada) {
+  <button type="button" (click)="hacerTarea(false)">Deshacer</button>
+} @else {
+  <button type="button" (click)="hacerTarea(true)">Hacer</button>
+}
+
+@if (notaMates < 5) {
+  <p>Has suspendido mates.</p>
+} @else if (notaMates < 7) {
+  <p>Bien, has aprobado, pero estudia más para la próxima.</p>
+} @else if (notaMates < 9) {
+  <p>Muy bien, sigue así.</p>
+} @else {
+  <p>Perfecto, no bajes el ritmo.</p>
+}
+
+<h4>&#64;for</h4>
+
+@for (t of listaTareas; track t.id; let pos = $index; let esPar = $even; let esImpar = $odd; let esPrimerElem = $first; let esUltimoElem = $last; let total = $count) {
+  <div [ngClass]="{completada: t.completada}">
+    <!-- <p>{{$index}}: {{t.texto}}</p> -->
+    <p>{{pos}}: {{t.texto}}</p>
+  </div>
+}
+
+<table>
+  <thead>
+    <tr>
+      <th>Nº</th>
+      <th>Tiker</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Recomendación de compra</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (accion of listaSeguimientoAcciones; track accion.ticker) {
+      <tr [ngClass]="{esPrimera: $first, esUltima: $last, esPar: $even}">
+        <td>{{$index + 1}}/{{$count}}</td>
+        <td>{{accion.ticker}}</td>
+        <td>{{accion.accion}}</td>
+        <td>{{accion.precio}}</td>
+        <td [ngStyle]="{backgroundColor: accion.recomendacion ? 'green' : 'red'}"></td>
+      </tr>
+    } @empty {
+      <tr [ngStyle]="{textAlign: 'center'}">
+        <td colspan="5">No hay acciones en seguimiento</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<button type="button" (click)="vaciarListaSeguimiento()">Eliminar acciones en seguimiento</button>
+
+
+
+<h4>&#64;switch</h4>
+
+<select [(ngModel)]="mascotaSeleccionada">
+  <!-- <option value="no">No tengo</option>
+  <option value="periquito">Periquito</option>
+  <option value="canario">Canario</option>
+  <option value="ninfa">Ninfa</option> -->
+  <!-- @for 👋 -->
+  @for (opcion of opcionesMascotas; track $index) {
+    <!-- <option value="{{opcion.valor}}">{{opcion.texto}}</option> -->
+    <option [value]="opcion.valor">{{opcion.texto}}</option>
+  }
+</select>
+
+@switch (mascotaSeleccionada) {
+  @case ('periquito') {
+    <p>Tengo un periquito</p>
+  }
+  @case ('canario') {
+    <p>Tengo un canario</p>
+  }
+  @case ('ninfa') {
+    <p>Tengo una ninfa</p>
+  }
+  @default {
+    <p>No tengo una mascota</p>
+  }
+}

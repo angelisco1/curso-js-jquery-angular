@@ -1,0 +1,21 @@
+<h3>De plantilla</h3>
+
+<form (ngSubmit)="signupSubmit(form)" #form="ngForm">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" [(ngModel)]="formRegistro.username" />
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" [(ngModel)]="formRegistro.email" />
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="formRegistro.password" />
+  </div>
+
+  <!-- <button type="button" (click)="signupBtn()">Sign up</button> -->
+  <button type="submit">Sign up</button>
+</form>

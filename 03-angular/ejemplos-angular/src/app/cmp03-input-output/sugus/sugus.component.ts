@@ -11,4 +11,16 @@ import { Component, Input } from '@angular/core';
 export class SugusComponent {
   @Input() sabor: string = 'limón'
   @Input() color: string = 'yellow'
+
+  constructor() {
+    console.log("Constructor: ", this.sabor)
+  }
+
+  ngOnChanges(changes: any) {
+    console.log("NgOnChanges: ", this.sabor, changes)
+  }
+
+  ngOnInit() {
+    console.log("NgOnInit: ", this.sabor)
+  }
 }

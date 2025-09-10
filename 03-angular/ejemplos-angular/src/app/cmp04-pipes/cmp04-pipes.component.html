@@ -1,1 +1,29 @@
-<p>cmp04-pipes works!</p>
+<h2>Tema 04 - Pipes</h2>
+
+<div>
+  <h3>{{producto.titulo}}</h3>
+  <p>{{producto.descripcion}}</p>
+  <div>
+    <span>Precio: {{producto.precio}}</span>
+    <span>Fecha lanzamiento: {{producto.fechaLanzamiento}}</span>
+  </div>
+</div>
+
+
+<div>
+  <h3>{{producto.titulo | titlecase}}</h3>
+  <p>{{producto.descripcion | slice:0:200 | puntitos}}</p>
+  <div>
+    <span>Precio: {{producto.precio | currency:'EUR':'symbol':'3.2-4' | colocarSimbolo}}</span>
+    <span>Fecha lanzamiento: {{producto.fechaLanzamiento | date:'dd/MM/yyyy'}}</span>
+  </div>
+</div>
+
+
+<div>
+  <pre>{{producto | json}}</pre>
+</div>
+
+<div>
+  <pre>{{productoPromise | async | json}}</pre>
+</div>

@@ -31,7 +31,7 @@ export class Cmp02ReferenciasComponent {
 
   setVolume(event: Event, video: HTMLMediaElement) {
     const volumen = (event.target as HTMLInputElement).value
-    video.volume = Number(volumen) / 100
+    video.volume = Number(volumen) / 100 // solo admite valores entre 0 y 1 (incluidos)
   }
 
 }
