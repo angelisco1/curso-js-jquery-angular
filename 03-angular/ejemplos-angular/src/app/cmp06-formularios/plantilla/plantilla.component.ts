@@ -26,6 +26,7 @@ export class PlantillaComponent {
     console.log("Sign up Submit")
     // console.log(this.formRegistro)
     console.log(form)
+    console.log(form.value)
   }
 
 }

@@ -1,21 +1,22 @@
 <h3>De plantilla</h3>
 
 <form (ngSubmit)="signupSubmit(form)" #form="ngForm">
-  <div>
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" [(ngModel)]="formRegistro.username" />
+  <div class="my-2">
+    <label for="username" class="mx-2">Username</label>
+    <input type="text" id="username" name="username" [ngModel]="formRegistro.username" required />
   </div>
 
-  <div>
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" [(ngModel)]="formRegistro.email" />
+  <div class="my-2">
+    <label for="email" class="mx-2">Email</label>
+    <input type="text" id="email" name="email" [ngModel]="formRegistro.email" required />
   </div>
 
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" [(ngModel)]="formRegistro.password" />
+  <div class="my-2">
+    <label for="password" class="mx-2">Password</label>
+    <input type="password" id="password" name="password" [ngModel]="formRegistro.password" required />
   </div>
 
-  <!-- <button type="button" (click)="signupBtn()">Sign up</button> -->
-  <button type="submit">Sign up</button>
+  <!-- <button type="button" (click)="signupBtn()">Sign up BTN</button> -->
+  <button type="submit" class="my-2" [disabled]="form.invalid">Sign up</button>
+
 </form>

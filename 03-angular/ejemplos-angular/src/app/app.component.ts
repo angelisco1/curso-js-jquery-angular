@@ -6,6 +6,7 @@ import { Cmp03InputOutputComponent } from './cmp03-input-output/cmp03-input-outp
 import { Cmp04PipesComponent } from './cmp04-pipes/cmp04-pipes.component';
 import { Cmp05DirectivasComponent } from "./cmp05-directivas/cmp05-directivas.component";
 import { Cmp06FormulariosComponent } from './cmp06-formularios/cmp06-formularios.component';
+import { Cmp07ServiciosObservablesYHttpComponent } from "./cmp07-servicios-observables-y-http/cmp07-servicios-observables-y-http.component";
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { Cmp06FormulariosComponent } from './cmp06-formularios/cmp06-formularios
     Cmp04PipesComponent,
     Cmp05DirectivasComponent,
     Cmp06FormulariosComponent,
+    Cmp07ServiciosObservablesYHttpComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

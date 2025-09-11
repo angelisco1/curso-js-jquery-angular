@@ -2,3 +2,21 @@
 .d-flex {
   display: flex;
 }
+
+.mx-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.my-2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid lightgreen;
+}
