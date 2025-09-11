@@ -1,8 +1,28 @@
 <h2>Tema 07 - Servicios, Observables y Peticiones HTTP</h2>
-<app-toolbar></app-toolbar>
+
+<h3>Servicios</h3>
 
 <button type="button" (click)="mostrarWarning()">Log warning</button>
 <button type="button" (click)="mostrarInfo()">Log info</button>
 <button type="button" (click)="mostrarError()">Log error</button>
 
+<h3>Observables y comunicación de componentes con servicios</h3>
+
+<app-toolbar></app-toolbar>
 <app-inicio></app-inicio>
+
+<h3>Peticiones HTTP</h3>
+
+<ul>
+  @for (usuario of usuarios; track usuario.id) {
+    <li>{{usuario.name}}</li>
+  }
+</ul>
+
+<ul>
+  @for (usuario of usuarios$ | async; track usuario.id) {
+    <li>{{usuario.name}}</li>
+  }
+</ul>
+
+<button type="button" (click)="crearUsuario()">Crear nuevo usuario</button>
