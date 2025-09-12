@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-errors',
@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './errors.component.html',
   styleUrl: './errors.component.css'
 })
-export class ErrorsComponent {
+export class ErrorsComponent implements OnChanges {
   @Input() errores: {[key: string]: any} | null | undefined = {}
   mensajesError: Array<string> = []
 
@@ -31,7 +31,6 @@ export class ErrorsComponent {
       }
 
     })
-
 
   }
 

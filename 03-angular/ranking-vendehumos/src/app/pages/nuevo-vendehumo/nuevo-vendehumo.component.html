@@ -1,1 +1,22 @@
-<p>nuevo-vendehumo works!</p>
+<h2>Nuevo vendehumo</h2>
+
+@if (form) {
+  <form [formGroup]="form" (ngSubmit)="guardar()">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" formControlName="nombre">
+    </div>
+
+    <div>
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" formControlName="categoria">
+        <option value="trading">Trading</option>
+        <option value="cripto">Criptomonedas</option>
+        <option value="idiomas">Idiomas</option>
+        <option value="inmuebles">Inmuebles</option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Guardar</button>
+  </form>
+}

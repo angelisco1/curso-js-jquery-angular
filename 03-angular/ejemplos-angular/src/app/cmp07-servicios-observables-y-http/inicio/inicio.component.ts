@@ -13,6 +13,8 @@ export class InicioComponent {
   usuario: string = "Charly"
   idioma: string = ''
 
+  subscription: Subscription | null = null
+
   constructor(
     private logger: LoggerService,
     private idiomaService: IdiomaService,
@@ -58,7 +60,7 @@ export class InicioComponent {
     }, 3000)
 
 
-    interval(1000)
+    this.subscription = interval(1000)
       .pipe(
         map(num => num * 2),
         filter(num => num > 10),
@@ -75,6 +77,9 @@ export class InicioComponent {
       this.idioma = idioma
     })
 
+  }
 
+  ngOnDestroy() {
+    this.subscription?.unsubscribe()
   }
 }

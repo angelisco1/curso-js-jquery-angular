@@ -13,7 +13,7 @@
 
   <div class="my-2">
     <label for="password" class="mx-2">Password</label>
-    <input type="password" id="password" name="password" [ngModel]="formRegistro.password" required />
+    <input type="password" id="password" name="password" [ngModel]="formRegistro.password" required minlength="5" />
   </div>
 
   <!-- <button type="button" (click)="signupBtn()">Sign up BTN</button> -->

@@ -9,7 +9,14 @@
 <h3>Observables y comunicación de componentes con servicios</h3>
 
 <app-toolbar></app-toolbar>
-<app-inicio></app-inicio>
+
+<button type="button" (click)="toggleInicio()">Inicio</button>
+
+@if (mostrarInicio) {
+  <app-inicio></app-inicio>
+}
+
+
 
 <h3>Peticiones HTTP</h3>
 

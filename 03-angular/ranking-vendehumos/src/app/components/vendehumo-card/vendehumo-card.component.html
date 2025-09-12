@@ -1,1 +1,16 @@
-<p>vendehumo-card works!</p>
+@if (vendehumo) {
+  <div class="vendehumo-card" [routerLink]="['/vendehumos', vendehumo.id]">
+    <div class="d-flex justify-content-center my-1">
+      <img [src]="vendehumo.url" alt="Foto de {{vendehumo.nombre}}" width="80" />
+    </div>
+    <div class="d-flex justify-content-space-between align-items-center my-1">
+      <span class="mx-1">{{vendehumo.nombre}}</span>
+      <button type="button" class="mx-1">{{vendehumo.numVotos}} 👎</button>
+    </div>
+    <div class="d-flex justify-content-center">
+      <span>{{vendehumo.categoria}}</span>
+    </div>
+  </div>
+} @else {
+  <p>Cargando...</p>
+}

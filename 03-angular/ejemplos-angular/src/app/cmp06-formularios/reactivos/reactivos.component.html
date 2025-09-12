@@ -26,8 +26,9 @@
       }
     </div>
 
-    <button type="submit">Sign up</button>
-    <!-- <button type="submit" [disabled]="formRegistro.invalid">Sign up</button> -->
+
+    <!-- <button type="submit">Sign up</button> -->
+    <button type="submit" [disabled]="formRegistro.invalid">Sign up</button>
   </form>
 } @else {
   <p>Cargando...</p>

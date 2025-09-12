@@ -21,6 +21,8 @@ export class Cmp07ServiciosObservablesYHttpComponent {
   usuarios: Usuarios = []
   usuarios$: Observable<Usuarios> | null = null
 
+  mostrarInicio: boolean = true
+
   constructor(
     private loggerService: LoggerService,
     private usuariosService: UsuariosService,
@@ -76,6 +78,10 @@ export class Cmp07ServiciosObservablesYHttpComponent {
         console.log(usuario)
         this.usuarios.push(usuario)
       })
+  }
+
+  toggleInicio() {
+    this.mostrarInicio = !this.mostrarInicio
   }
 
 }

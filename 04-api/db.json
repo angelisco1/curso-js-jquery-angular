@@ -1,0 +1,25 @@
+{
+  "vendehumos": [
+    {
+      "id": 1,
+      "nombre": "Charly Falco",
+      "url": "avatares/63.jpg",
+      "categoria": "trading",
+      "numVotos": 18
+    },
+    {
+      "nombre": "Evie",
+      "categoria": "trading",
+      "url": "avatares/63.jpg",
+      "numVotos": 0,
+      "id": 2
+    },
+    {
+      "nombre": "Mark",
+      "categoria": "idiomas",
+      "url": "avatares/63.jpg",
+      "numVotos": 0,
+      "id": 3
+    }
+  ]
+}
