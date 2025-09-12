@@ -25,4 +25,8 @@ export class VendehumosService {
   crearVendehumo(nuevoVendehumo: Partial<Vendehumo>): Observable<Vendehumo> {
     return this.http.post<Vendehumo>(this.url, nuevoVendehumo)
   }
+
+  actualizarVotos(id: number, numVotos: number): Observable<Vendehumo> {
+    return this.http.patch<Vendehumo>(`${this.url}/${id}`, { numVotos: numVotos + 1 })
+  }
 }

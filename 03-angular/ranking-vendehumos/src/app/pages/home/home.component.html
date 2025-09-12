@@ -1,5 +1,5 @@
 <h2>Ranking de vendehumos</h2>
 
 @for (vh of listaVendehumos; track vh.id) {
-  <app-vendehumo-card [vendehumo]="vh"></app-vendehumo-card>
+  <app-vendehumo-card [vendehumo]="vh" (onVotar)="votar($event)"></app-vendehumo-card>
 }

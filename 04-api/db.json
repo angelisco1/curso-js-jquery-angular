@@ -5,20 +5,20 @@
       "nombre": "Charly Falco",
       "url": "avatares/63.jpg",
       "categoria": "trading",
-      "numVotos": 18
+      "numVotos": 24
     },
     {
       "nombre": "Evie",
       "categoria": "trading",
       "url": "avatares/63.jpg",
-      "numVotos": 0,
+      "numVotos": 13,
       "id": 2
     },
     {
       "nombre": "Mark",
       "categoria": "idiomas",
       "url": "avatares/63.jpg",
-      "numVotos": 0,
+      "numVotos": 16,
       "id": 3
     }
   ]

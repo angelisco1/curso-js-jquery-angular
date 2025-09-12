@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Vendehumo } from '../../types/vendehumo.model';
 import { RouterLink } from '@angular/router';
 
@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
 })
 export class VendehumoCardComponent {
   @Input() vendehumo: Vendehumo | null = null
+  @Output() onVotar = new EventEmitter<Vendehumo>()
+
+
+  votar(event: Event) {
+    event.stopPropagation()
+
+    this.onVotar.emit(this.vendehumo!)
+  }
 }
